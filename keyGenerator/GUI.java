@@ -8,6 +8,7 @@ public class GUI extends JFrame{
     private JPanel rootPanel;
     private JLabel lblKey;
     private JTextField tfKey;
+    private JLabel lblDesc;
 
     public GUI(){
         // for use the designer form
@@ -16,7 +17,7 @@ public class GUI extends JFrame{
         setVisible(true);
         setTitle("Key Generator");
         //setMinimumSize();
-        setSize(480,280);
+        setSize(680,140);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         btnGen.addActionListener(new ActionListener() {
@@ -28,7 +29,7 @@ public class GUI extends JFrame{
                     a.setStr("");
                     a.keyGenerate();
                     tfKey.setText(a.getStr());
-                    lblKey.setText("Key is generate!");
+                    lblKey.setText("Пароль готов!");
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
