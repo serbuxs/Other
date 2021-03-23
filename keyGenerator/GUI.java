@@ -7,6 +7,7 @@ public class GUI extends JFrame{
     private JButton btnGen;
     private JPanel rootPanel;
     private JLabel lblKey;
+    private JTextField tfKey;
 
     public GUI(){
         // for use the designer form
@@ -14,7 +15,8 @@ public class GUI extends JFrame{
 
         setVisible(true);
         setTitle("Key Generator");
-        setSize(240,180);
+        //setMinimumSize();
+        setSize(480,280);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         btnGen.addActionListener(new ActionListener() {
@@ -25,8 +27,8 @@ public class GUI extends JFrame{
                     a.setKeyLen(64);
                     a.setStr("");
                     a.keyGenerate();
-                    lblKey.setText(a.getStr());
-                    //lblKey.setText("Successfully written!");
+                    tfKey.setText(a.getStr());
+                    lblKey.setText("Key is generate!");
                 } catch (IOException ioException) {
                     ioException.printStackTrace();
                 }
