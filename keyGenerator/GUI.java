@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class GUI extends JFrame{
         setTitle("Key Generator");
         //setMinimumSize();
         setSize(680,140);
+        setMinimumSize(new Dimension(680, 140));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         btnGen.addActionListener(new ActionListener() {
