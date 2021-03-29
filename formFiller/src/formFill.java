@@ -19,8 +19,8 @@ public class formFill {
         WebElement password = driver.findElement(By.id("password_field"));
 
         // send values to email and password fields
-        email.sendKeys("sbukhovets@gmail.com");
-        password.sendKeys("proSerique5");
+        email.sendKeys("*****@gmail.com");
+        password.sendKeys("**********");
         System.out.println("TextFields are filled!");
 
         // find button element and click it
